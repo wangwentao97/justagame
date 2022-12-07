@@ -14,14 +14,26 @@
         <button class="button" id="get-question4"> Get Question4 </button>
     </div>
     <div class="question-container">
-        <p id="question">
-        </p>
+        <p id="question"></p>
     </div>
+    <div class="timer-container" id="timer"></div>
     <div class="button-container">
         <button class="button" id="get-answer"> Show Result </button>
+        <button class="button" id="send-answer"> Send Result </button>
     </div>
-    <div id="player-answers"></div>
+    <div class="result-container" id="player-answers"></div>
+    <div id="container">
+        <svg id="visual1" viewBox="-320 -320 640 640" style="max-width: 640px;" text-anchor="middle" font-family="sans-serif">
+        </svg>
+        <svg id="visual2" viewBox="-320 -320 640 640" style="max-width: 640px;" text-anchor="middle" font-family="sans-serif">
+        </svg>
+        <svg id="visual3" viewBox="-320 -320 640 640" style="max-width: 640px;" text-anchor="middle" font-family="sans-serif">
+        </svg>
+        <svg id="visual4" viewBox="-320 -320 640 640" style="max-width: 640px;" text-anchor="middle" font-family="sans-serif">
+        </svg>
+    </div>
     <script type="text/javascript" src="/socket.io/socket.io.js"></script>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
     <script src="app.js"></script>
 </body>
 </html>

@@ -8,17 +8,17 @@ let result = [];
 //questions
 let quiz = [{
     question : "1. Choose an option.",
-    options : ["+1 point", "If you are the only one choosing, +3", "If most players choose this, they +2"]
+    options : ["You earn 1 point.", "If you are the only one choosing this option, you will earn 3 points.", "If most of the players choose this option, they all earn 2 points."]
 }, {
-    question : "2. If the number of player choosing 1 more than 2, then 1 and 2 switch.",
-    options : ["+2 points", "-2 points", "+0 points"]
+    question : "2. If there are more players choosing option 1 than 2, option 1 and 2 will switch.",
+    options : ["You earn 2 points.", "You lose 2 points.", "You earn 0 point."]
 }, {
-    question : "3. If no player chooses 2, all players -3 points.",
-    options : ["+1 point", "-1 point", "+0 points"]
+    question : "3. If no player chooses option 2, all players will lose 3 points.",
+    options : ["You earn 1 point.", "You lose 1 point.", "You earn 0 point."]
 },
 {
     question : "4. Choose an option.",
-    options : ["-1 point", "-0 point, if you are the highest, clear your points", "-2 points"]
+    options : ["You lose 1 point.", "You lose 0 point. If you have the most points, clear all your points.", "You lose 2 points."]
 }];
 
 //Initialize the actual HTTP server
@@ -108,6 +108,10 @@ host.on('connection', (socket) => {
 
     socket.on('getanswer', () => {
         host.emit('results', result);
+    })
+
+    socket.on('sendanswer', (data) => {
+        player.emit('finalResults', data);
     })
 })
 

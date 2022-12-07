@@ -7,10 +7,14 @@
     <link href="style.css" rel="stylesheet"/>
 </head>
 <body>
-    <p id="greeting"></p>
+    <p class="greeting-container" id="greeting"></p>
     <p class="question-container" id="questions"></p>
-    <div id="answers" class="option-container">
+    
+    <div id="all-container"></div>
+        <div id="answers" class="option-container"></div>
+        <div class="timer-container" id="timer"></div>
     </div>
+    <div class="result-container" id="answers-container"></div>
     <script type="text/javascript" src="/socket.io/socket.io.js"></script>
     <script src="app.js"></script>
 </body>

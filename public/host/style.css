@@ -36,3 +36,16 @@ body {
   font-size: 24px;
   margin-top: 10px;
 }
+
+.result-container{
+  color: rgb(26, 26, 26);
+  width: 70%;
+  margin-left: 15%;
+  text-align: left;
+  margin-top: 5%;
+}
+
+.timer-container{
+  text-align: right;
+  margin-right: 10%;
+}
